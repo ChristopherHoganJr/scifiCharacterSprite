@@ -1,0 +1,32 @@
+:root {
+    --pixel-size: 3;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.character {
+    background: lightgray;
+    height: calc(124px * var(--pixel-size));
+    width: calc(119px * var(--pixel-size));
+    overflow: hidden;
+}
+.character_spritesheet {
+    
+}
+.character_idle {
+    animation: moveSpritesheet 1s steps(9) infinite;
+    width: calc(119px * var(--pixel-size));
+}
+
+@keyframes moveSpritesheet {
+    from {
+        transform: translate3d(0px,0px,0px);
+    }
+    to {
+        transform: translate3d(0px,-100%,0px);
+    }
+}
